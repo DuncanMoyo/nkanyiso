@@ -4,6 +4,8 @@ import { FC } from "react";
 import { IconContext } from "react-icons";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { LuMoon } from "react-icons/lu";
+import { MdOutlineClose } from "react-icons/md";
+import { HiOutlineMenu } from "react-icons/hi";
 
 export const iconNames = ["menu", "close", "location", "keypad"] as const;
 
@@ -30,6 +32,10 @@ const selectIcon = (
       return <MdOutlineWbSunny />;
     case "moon":
       return <LuMoon />;
+    case "close":
+      return <MdOutlineClose />;
+    case "menu":
+      return <HiOutlineMenu />;
     default:
       return <></>;
   }

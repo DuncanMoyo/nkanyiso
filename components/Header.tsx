@@ -47,8 +47,8 @@ const Header = () => {
           <Image
             src="/assets/images/cffs-logo.png"
             alt="logo_white"
-            width={50}
-            height={50}
+            width={150}
+            height={150}
           />
         </AnchorLink>
 
@@ -61,7 +61,7 @@ const Header = () => {
                     scale: 1.2,
                     textShadow: "0px 0px 8px rgb(255, 255, 255)",
                   }}
-                  className="text-white"
+                  className=""
                 >
                   {name}
                 </motion.li>
@@ -83,19 +83,10 @@ const Header = () => {
           transform: scrollDir === "up" ? "translateY(0)" : "translateY(-100%)",
         }}
       >
-        <AnchorLink href="#home">
-          <Image
-            src="/assets/images/logo_white.png"
-            alt="logo_white"
-            width={35}
-            height={35}
-          />
-        </AnchorLink>
-
+        <ModeToggle />
         <Icon
           name={toggle ? "close" : "menu"}
           onClick={() => setToggle(!toggle)}
-          color="white"
         />
       </div>
       {toggle && (
@@ -107,7 +98,7 @@ const Header = () => {
               key={index}
               href={url}
             >
-              <p className="uppercase text-white">{name}</p>
+              <p className="uppercase">{name}</p>
             </AnchorLink>
           ))}
         </div>
